@@ -1,0 +1,92 @@
+body{
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    background-color: #c9bfc5;
+}
+
+.navbar{
+    background-color: #c9bfc5 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #050505 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: translateY(-5px);
+}
+
+.nav-link {
+  background-color:transparent;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background-color: #c9bfc5;
+    transform: translateY(-5px);
+}
+
+.dropdown-menu {
+    background-color: #c9bfc5;
+    border: none;
+    box-shadow: 0 0px 8px #211f1f;
+}
+
+.footer{
+    height:50px;
+    width:100%;
+    background-color:
+    position: fixed;
+    text-align: center;
+    bottom: 0%;
+}
+
+.card{
+    display:inline-block;
+    margin-top: 50px;
+    margin-left: 150px;
+    width: 300px;
+    border:0;
+    background-color: transparent;
+    box-shadow: 0 0px 8px #211f1f;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card .btn{
+    box-shadow: 0 0px 8px #211f1f;
+    background-color: black;
+    color: white;
+}
+
+.card h5{
+    text-align:center;
+    font-weight:bold;
+}
+
+.form-control{
+    width:50%;
+}
+
+
+.fa-cart-shopping:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.fa-solid.fa-minus,
+.fa-circle-plus,
+.fa-trash-can {
+        font-size:25px;
+        letter-spacing:15px;
+}
+
+
+
+
+
+

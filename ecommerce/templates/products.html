@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <center>
+        <img src="{{ c.image.url }}" height="500px" width="500px" style="box-shadow: 0 0px 8px #211f1f;" >
+    </center>
+</div>
+<div class="container-fluid">
+    <h3 class="text-center mt-5">{{ c.name }}</h3>
+     <p style="text-align:justify;">{{ c.desc }}</p>
+</div>
+
+<!-- CARD -->
+{% for i in p %}
+
+<div class="card" >
+    <img src="{{ i.image.url }}" class="card-img-top ">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{ i.name }}</h5>
+     <p class="card-text" style="height:150px;">{{ i.desc }}</p>
+     <a href="{% url 'shop:productdetails' i.name %}" class="btn mt-auto" style="width:100%;">View Product</a>
+  </div>
+</div>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <img src="{% static 'images/bannerimage.jpg' %}" height="600px" width="100%">
+</div>
+<div class="container-fluid">
+    <h3 class="text-center mt-5">Our Collections</h3>
+    <p style="text-align:justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+        <!-- CARD -->
+
+{% for i in c %}
+
+<div class="card">
+    <img src="{{ i.image.url }}" class="card-img-top ">
+  <div class="card-body">
+    <h5 class="card-title">{{ i.name }}</h5>
+    <p class="card-text" ></p>
+    <a href="{% url 'shop:allproducts' i.name %}" class="btn" style="width:100%;">{{ i.name }}</a>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

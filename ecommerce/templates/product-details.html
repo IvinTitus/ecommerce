@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container-fluid my-5 text-light">
+    <div class="row justify-content-center my-2">
+        <div class="col-6">
+            {% if d.image %}
+            <img class="img-fluid" height="400px" width="500px;" style="box-shadow: 0 0px 8px #211f1f;" src="{{d.image.url}}">
+            {% endif %}
+        </div>
+        <div class="col-5" style="color:black;">
+            <p class="display-2 my-2">{{d.name}}</p>
+            <p class="display-6 my-2">{{d.year}}</p>
+            <p class="lead">{{d.desc}}</p>
+            <div class="text-start">
+                <a class="btn" style="box-shadow: 0 0px 8px #211f1f; background-color: black; color: white;"
+                   href="{% url 'cart:addtocart' d.name %}">Add to cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}
